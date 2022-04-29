@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/back_account.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/backround_main.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/borderback.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/borderblue.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/borderradiusbtn.xml" value="0.175" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/borderrdswhite.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/brderblue.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/header_backround.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_person_pin_circle_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/imagecheckbx.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/indecator_inactive.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/indicator_active.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/input_border.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/search_icon.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/trending_back.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/drawable/white_retrangle.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_get_started.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_home_page.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_intro.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_login.xml" value="0.12" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/fragment_account.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/fragment_cars.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/item_add.xml" value="0.22" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/item_email.xml" value="0.3270440251572327" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/item_image.xml" value="0.31137724550898205" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/item_info.xml" value="0.22" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/slide_item.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/layout/splashscreen.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/menu/menu_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Solicode/Desktop/Projet Fil Rouge/Kotlin/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19166666666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

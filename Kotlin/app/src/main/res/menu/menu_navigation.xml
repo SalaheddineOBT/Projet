@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home" android:icon="@drawable/ic_baseline_home_24" android:title="@string/home" />
+    <item android:id="@+id/cars" android:icon="@drawable/ic_baseline_directions_car_24" android:title="@string/car" />
+    <item android:id="@+id/explor" android:icon="@drawable/ic_baseline_explore_24" android:title="@string/explore" />
+    <item android:id="@+id/notifications" android:icon="@drawable/ic_baseline_notifications_24" android:title="@string/notifications" />
+    <item android:id="@+id/profil" android:icon="@drawable/ic_baseline_account_circle_24" android:title="@string/acount" />
+</menu>

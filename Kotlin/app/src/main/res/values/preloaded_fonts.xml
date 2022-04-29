@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/amaranth_bold</item>
+        <item>@font/audiowide</item>
+        <item>@font/maitree_bold</item>
+        <item>@font/rowdies</item>
+    </array>
+</resources>

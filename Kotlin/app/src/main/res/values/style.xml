@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Check Box Style -->
+    <style name="chbx" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+</resources>

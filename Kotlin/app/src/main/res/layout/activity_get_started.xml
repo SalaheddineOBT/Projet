@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+    <TextView
+        android:id="@+id/tttx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/rowdies"
+        android:text="Let's Get Started"
+        android:textAlignment="center"
+        android:textColor="@color/color_primary"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tttx1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rowdies"
+        android:text="Login Or Create Your Account"
+        android:textAlignment="center"
+        android:textColor="@color/color_second"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tttx" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/slideimg5"
+        app:layout_constraintBottom_toTopOf="@id/lnrr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tttx"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnrr"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:minWidth="150dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textSize="16sp"
+            android:background="@drawable/brderblue"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:id="@+id/btnLog"
+            android:elevation="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:minWidth="150dp"
+            android:textColor="#273238"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textSize="16sp"
+            android:background="@drawable/borderrdswhite"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:elevation="10dp"
+            android:id="@+id/btncrAcc"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

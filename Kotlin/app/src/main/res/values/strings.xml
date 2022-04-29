@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="forgot"><u>Forgot password ?</u></string>
+    <string name="hello">Hello</string>
+    <string name="hello2">Hello World !</string>
+    <string name="home">Home</string>
+    <string name="car">Cars</string>
+    <string name="setting">Settings</string>
+    <string name="acount">Acount</string>
+    <string name="explore">Explore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="Item_title_1">Choose What Your Car Needs</string>
+    <string name="Item_title_2">Rent Your Favourite Car Easily</string>
+    <string name="Item_title_3">Book Now And Get Started !</string>
+    <string name="Item_title_4">Choose Your Driven Car Type</string>
+    <string name="Item_title_5">Pick &amp; Drop Services For Your Car !</string>
+    <string name="Item_Desc_1">Select car, date &amp; time and your location to connect you with available car !</string>
+    <string name="Item_Desc_2">Enjoy A High Quality Car Comes To Your Location During At Short Time .</string>
+    <string name="Item_Desc_3"> Find reliable car &amp; Meet the nearest available car in your current location .</string>
+    <string name="Item_Desc_4">With Car Book Your Favourite Car At Cool Prices &amp; Excellent Services . </string>
+    <string name="Item_Desc_5">Enjoy Airport Transfers Free Extras And Excellent Services With Meet .</string>
+    <string name="next">Next</string>
+    <string name="create">Don\'t have an account ? \u0020</string>
+</resources>
