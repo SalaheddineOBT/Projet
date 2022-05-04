@@ -7,6 +7,7 @@ import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.widget.*
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.widget.addTextChangedListener
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,11 @@ class RegisterActivity : AppCompatActivity() {
         val txtConfirm:EditText=findViewById(R.id.txtConfirm)
         val btnRegister:AppCompatButton=findViewById(R.id.btnRegister)
         val txtSignin:TextView=findViewById(R.id.txtSignin)
+        val lnrname:RelativeLayout=findViewById(R.id.lnrname)
+        val lnremml:RelativeLayout=findViewById(R.id.lnremml)
+        val lnrphn:RelativeLayout=findViewById(R.id.lnrphn)
+        val lnrpss:RelativeLayout=findViewById(R.id.lnrpss)
+        val lnrcfrm:RelativeLayout=findViewById(R.id.lnrcfrm)
         var isshow1=false
         var isshow2=false
 
@@ -49,10 +55,42 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        txtSignin.setOnClickListener { finish() }
+        txtSignin.setOnClickListener {
+            startActivity(Intent(this@RegisterActivity,LoginActivity::class.java))
+            finish()
+        }
+
+        txtName.addTextChangedListener{ value -> formvalidate(value.toString(),txtName,lnrname) }
+        txtEmail.addTextChangedListener{ value -> formvalidate(value.toString(),txtEmail,lnremml) }
+        txtPass.addTextChangedListener{ value -> formvalidate(value.toString(),txtPass,lnrpss) }
+        txtPhone.addTextChangedListener{ value -> formvalidate(value.toString(),txtPhone,lnrphn) }
+        txtConfirm.addTextChangedListener{ value -> formvalidate(value.toString(),txtConfirm,lnrcfrm) }
+
+        btnRegister.setOnClickListener{
+            var fullname:String=txtName.text.toString()
+            var email:String=txtEmail.text.toString()
+            var phone:String=txtPhone.text.toString()
+            var password:String=txtPass.text.toString()
+            var confirm:String=txtConfirm.text.toString()
+            formvalidate(fullname,txtName,lnrname)
+            formvalidate(email,txtEmail,lnremml)
+            formvalidate(phone,txtPhone,lnrphn)
+            formvalidate(password,txtPass,lnrpss)
+            formvalidate(confirm,txtConfirm,lnrcfrm)
 
 
 
+        }
 
+    }
+    private fun formvalidate(value:String,txt:EditText,lnr:RelativeLayout){
+        if(value.isNullOrEmpty()){
+            lnr.background=getDrawable(R.drawable.errorborder)
+            //txt.setHintTextColor(getResources().getColor(R.color.red))
+        }
+        else{
+            lnr.background=getDrawable(R.drawable.input_border)
+            //txt.setHintTextColor(getResources().getColor(R.color.red))
+        }
     }
 }

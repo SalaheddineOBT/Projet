@@ -31,8 +31,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:padding="10dp">
+            android:layout_marginTop="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <TextView
                 android:id="@+id/lblName"
@@ -47,29 +48,40 @@
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtName"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/lblName"
+                android:id="@+id/lnrname"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:autofillHints="emailAddress"
                 android:background="@drawable/input_border"
-                android:fontFamily="sans-serif-black"
-                android:hint="@string/enter_your_full_name"
-                android:inputType="text"
-                android:padding="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:textSize="23sp" />
+                android:layout_below="@id/lblName">
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="emailAddress"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="@string/enter_your_full_name"
+                    android:textColorHint="#B6B6B6"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp">
 
             <TextView
                 android:id="@+id/lblEmail"
@@ -84,29 +96,40 @@
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtEmailR"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/lblEmail"
+                android:id="@+id/lnremml"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:autofillHints="emailAddress"
                 android:background="@drawable/input_border"
-                android:fontFamily="sans-serif-black"
-                android:hint="@string/enter_your_email"
-                android:inputType="textEmailAddress"
-                android:padding="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:textSize="23sp" />
+                android:layout_below="@id/lblEmail">
+
+                <EditText
+                    android:id="@+id/txtEmailR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="emailAddress"
+                    android:textColorHint="#B6B6B6"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="@string/enter_your_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:paddingBottom="20dp"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp">
 
             <TextView
                 android:id="@+id/lblPhone"
@@ -121,29 +144,40 @@
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtPhone"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/lblPhone"
+                android:id="@+id/lnrphn"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                android:autofillHints="emailAddress"
                 android:background="@drawable/input_border"
-                android:fontFamily="sans-serif-black"
-                android:hint="@string/enter_your_phone_number"
-                android:inputType="phone"
-                android:padding="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:textSize="23sp" />
+                android:layout_below="@id/lblPhone">
+
+                <EditText
+                    android:id="@+id/txtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="emailAddress"
+                    android:textColorHint="#B6B6B6"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="@string/enter_your_phone_number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:background="@android:color/transparent"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp">
 
             <TextView
                 android:id="@+id/lblPass"
@@ -162,6 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/lblPass"
+                android:id="@+id/lnrpss"
                 android:background="@drawable/input_border"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp">
@@ -177,6 +212,7 @@
                     android:hint="@string/enter_your_password"
                     android:inputType="textPassword"
                     android:padding="10dp"
+                    android:textColorHint="#B6B6B6"
                     android:paddingTop="10dp"
                     android:paddingBottom="20dp"
                     android:textSize="20sp" />
@@ -198,7 +234,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp">
 
             <TextView
                 android:id="@+id/lblConfirm"
@@ -217,6 +255,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/lblConfirm"
+                android:id="@+id/lnrcfrm"
                 android:background="@drawable/input_border"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp">
@@ -225,17 +264,16 @@
                     android:id="@+id/txtConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="50dp"
                     android:autofillHints="emailAddress"
                     android:background="@android:color/transparent"
                     android:fontFamily="sans-serif-black"
                     android:hint="@string/confirm_your_password"
                     android:inputType="textPassword"
+                    android:textColorHint="#B6B6B6"
                     android:padding="10dp"
                     android:paddingTop="10dp"
                     android:paddingBottom="20dp"
-                    android:textSize="23sp" />
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:id="@+id/showconfirmpss"
@@ -256,7 +294,7 @@
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:minWidth="150dp"
-            android:textColor="@color/color_primaryDark"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:paddingVertical="10dp"
             android:textSize="19sp"

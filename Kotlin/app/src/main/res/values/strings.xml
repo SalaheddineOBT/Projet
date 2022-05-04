@@ -41,7 +41,7 @@
     <string name="phone_number">Phone Number :</string>
     <string name="enter_your_phone_number">Enter Your Phone Number</string>
     <string name="register">Register</string>
-    <string name="already_have_an_account">Already Have An Account ?</string>
+    <string name="already_have_an_account">Already Have An Account ? \u0020</string>
     <string name="sign_in">Sign In</string>
     <string name="confirm_password">Confirm Password :</string>
     <string name="confirm_your_password">Confirm Your Password</string>

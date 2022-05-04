@@ -43,22 +43,31 @@
             android:textSize="23sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/txtEmail"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:autofillHints="emailAddress"
-            android:layout_below="@id/lblEmail"
+            android:id="@+id/lnremal"
             android:layout_marginStart="20dp"
-            android:hint="@string/enter_your_email"
             android:layout_marginEnd="20dp"
             android:background="@drawable/input_border"
-            android:fontFamily="sans-serif-black"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="20dp"
-            android:textSize="23sp" />
+            android:layout_below="@id/lblEmail">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="emailAddress"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textColorHint="#B6B6B6"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
 
     </RelativeLayout>
 
@@ -83,6 +92,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:id="@+id/lnrpass"
             android:layout_below="@id/lblPass"
             android:background="@drawable/input_border"
             android:layout_marginStart="20dp"
@@ -96,11 +106,12 @@
                 android:autofillHints="password"
                 android:background="@android:color/transparent"
                 android:fontFamily="sans-serif-black"
+                android:hint="@string/enter_your_password"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:hint="@string/enter_your_password"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
+                android:textColorHint="#B6B6B6"
                 android:textSize="20sp" />
 
             <ImageView
@@ -133,7 +144,7 @@
             android:padding="5dp"
             android:text="@string/remember_me"
             android:textColor="@color/black"
-            android:textSize="17sp" />
+            android:textSize="19sp" />
 
         <TextView
             android:id="@+id/btnfrgtpass"
@@ -145,7 +156,7 @@
             android:fontFamily="sans-serif-thin"
             android:text="@string/forgot"
             android:textColor="#0460A5"
-            android:textSize="17sp"
+            android:textSize="19sp"
             android:textStyle="bold"
             tools:ignore="RelativeOverlap" />
 
@@ -156,7 +167,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:minWidth="150dp"
-        android:textColor="@color/color_primaryDark"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:paddingVertical="10dp"
         android:textSize="19sp"
@@ -165,7 +176,7 @@
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
         android:elevation="20dp"
-        android:id="@+id/btncrAcc"
+        android:id="@+id/btnLogIn"
         android:layout_marginBottom="25dp" />
 
     <LinearLayout
