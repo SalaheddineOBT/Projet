@@ -25,4 +25,24 @@
     <string name="Item_Desc_5">Enjoy Airport Transfers Free Extras And Excellent Services With Meet .</string>
     <string name="next">Next</string>
     <string name="create">Don\'t have an account ? \u0020</string>
+    <string name="login_page">Login Page</string>
+    <string name="pleas_login_to_your_account">Pleas Login To Your Account</string>
+    <string name="email">Email :</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="password">Password :</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register_page">Register Page</string>
+    <string name="pleas_create_your_account">Pleas Create Your Account</string>
+    <string name="full_name">Full Name :</string>
+    <string name="enter_your_full_name">Enter Your Full Name</string>
+    <string name="phone_number">Phone Number :</string>
+    <string name="enter_your_phone_number">Enter Your Phone Number</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already Have An Account ?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="confirm_password">Confirm Password :</string>
+    <string name="confirm_your_password">Confirm Your Password</string>
 </resources>

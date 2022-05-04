@@ -1,9 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/maitree_bold"
+            android:text="@string/register_page"
+            android:textAlignment="center"
+            android:textColor="@color/color_primary"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:text="@string/pleas_create_your_account"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="10dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="0dp"
+                android:text="@string/full_name"
+                android:textColor="#0460A5"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblName"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/input_border"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/enter_your_full_name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="23sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lblEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="10dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="0dp"
+                android:text="@string/email"
+                android:textColor="#0460A5"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtEmailR"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblEmail"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/input_border"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/enter_your_email"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="23sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lblPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="10dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="0dp"
+                android:text="@string/phone_number"
+                android:textColor="#0460A5"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblPhone"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/input_border"
+                android:fontFamily="sans-serif-black"
+                android:hint="@string/enter_your_phone_number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:textSize="23sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lblPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="10dp"
+                android:textColor="#0460A5"
+                android:paddingStart="22dp"
+                android:paddingEnd="0dp"
+                android:text="@string/password"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblPass"
+                android:background="@drawable/input_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <EditText
+                    android:id="@+id/txtPassR"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="50dp"
+                    android:autofillHints="password"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="@string/enter_your_password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/showpssR"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/showpassword" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/lblConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:padding="10dp"
+                android:paddingStart="22dp"
+                android:paddingEnd="0dp"
+                android:text="@string/confirm_password"
+                android:textColor="#0460A5"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/lblConfirm"
+                android:background="@drawable/input_border"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp">
+
+                <EditText
+                    android:id="@+id/txtConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:autofillHints="emailAddress"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-black"
+                    android:hint="@string/confirm_your_password"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="20dp"
+                    android:textSize="23sp" />
+
+                <ImageView
+                    android:id="@+id/showconfirmpss"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/showpassword" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:minWidth="150dp"
+            android:textColor="@color/color_primaryDark"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:textSize="19sp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/borderblue"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:elevation="20dp"
+            android:id="@+id/btnRegister"
+            android:layout_marginBottom="25dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/color_Accent2"
+                android:textStyle="bold"
+                android:text="@string/already_have_an_account"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSignin"
+                android:text="@string/sign_in"
+                android:textStyle="bold"
+                android:textColor="@color/color_primary"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

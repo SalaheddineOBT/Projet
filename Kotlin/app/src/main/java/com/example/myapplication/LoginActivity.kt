@@ -34,6 +34,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
         txtSignup.setOnClickListener { startActivity(Intent(this@LoginActivity,RegisterActivity::class.java)) }
-        
+
     }
 }
