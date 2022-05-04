@@ -35,24 +35,29 @@ class LoginActivity : AppCompatActivity() {
                 passinput.transformationMethod= PasswordTransformationMethod.getInstance()
             }
         }
-
         txtSignup.setOnClickListener {
             startActivity(Intent(this@LoginActivity,RegisterActivity::class.java))
             finish()
         }
         emailinput.addTextChangedListener{ value -> formvalidate(value.toString(),emailinput,lineareml) }
         passinput.addTextChangedListener{ value -> formvalidate(value.toString(),passinput,linearpass) }
-
         btnLogin.setOnClickListener{
             var email:String=emailinput.text.toString()
             var password:String=passinput.text.toString()
             formvalidate(email,emailinput,lineareml)
             formvalidate(password,passinput,linearpass)
 
+            if(!password.isNullOrEmpty() || !email.isNullOrEmpty()){
+                val intent:Intent= Intent(this@LoginActivity,MainActivity::class.java)
+                intent.putExtra("UserName","hello")
+                startActivity(intent)
+                finish()
+            }else{
+
+            }
         }
 
     }
-
     private fun formvalidate(value:String,txt:EditText,lnr:RelativeLayout){
         if(value.isNullOrEmpty()){
             lnr.background=getDrawable(R.drawable.errorborder)

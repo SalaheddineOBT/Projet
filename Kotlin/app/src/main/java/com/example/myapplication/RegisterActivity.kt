@@ -42,7 +42,6 @@ class RegisterActivity : AppCompatActivity() {
                 txtPass.transformationMethod= PasswordTransformationMethod.getInstance()
             }
         }
-
         showConfirmpss.setOnClickListener{
             if(isshow2 != true){
                 isshow2=true
@@ -54,18 +53,15 @@ class RegisterActivity : AppCompatActivity() {
                 txtConfirm.transformationMethod= PasswordTransformationMethod.getInstance()
             }
         }
-
         txtSignin.setOnClickListener {
             startActivity(Intent(this@RegisterActivity,LoginActivity::class.java))
             finish()
         }
-
         txtName.addTextChangedListener{ value -> formvalidate(value.toString(),txtName,lnrname) }
         txtEmail.addTextChangedListener{ value -> formvalidate(value.toString(),txtEmail,lnremml) }
         txtPass.addTextChangedListener{ value -> formvalidate(value.toString(),txtPass,lnrpss) }
         txtPhone.addTextChangedListener{ value -> formvalidate(value.toString(),txtPhone,lnrphn) }
         txtConfirm.addTextChangedListener{ value -> formvalidate(value.toString(),txtConfirm,lnrcfrm) }
-
         btnRegister.setOnClickListener{
             var fullname:String=txtName.text.toString()
             var email:String=txtEmail.text.toString()
@@ -78,8 +74,18 @@ class RegisterActivity : AppCompatActivity() {
             formvalidate(password,txtPass,lnrpss)
             formvalidate(confirm,txtConfirm,lnrcfrm)
 
+            if(!fullname.isNullOrEmpty() || !email.isNullOrEmpty() || !phone.isNullOrEmpty() || !password.isNullOrEmpty() || !confirm.isNullOrEmpty()){
+                if(password == confirm){
+                    val intent:Intent= Intent(this@RegisterActivity,MainActivity::class.java)
+                    intent.putExtra("UserName","hello")
+                    startActivity(intent)
+                    finish()
+                }else{
 
+                }
+            }else{
 
+            }
         }
 
     }
