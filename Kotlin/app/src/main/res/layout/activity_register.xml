@@ -18,14 +18,14 @@
             android:text="@string/register_page"
             android:textAlignment="center"
             android:textColor="@color/color_primary"
-            android:textSize="45sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:text="@string/pleas_create_your_account"/>
 
         <RelativeLayout
@@ -45,7 +45,7 @@
                 android:paddingEnd="0dp"
                 android:text="@string/full_name"
                 android:textColor="#0460A5"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -93,7 +93,7 @@
                 android:paddingEnd="0dp"
                 android:text="@string/email"
                 android:textColor="#0460A5"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -141,7 +141,7 @@
                 android:paddingEnd="0dp"
                 android:text="@string/phone_number"
                 android:textColor="#0460A5"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -185,11 +185,11 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
                 android:padding="10dp"
-                android:textColor="#0460A5"
                 android:paddingStart="22dp"
                 android:paddingEnd="0dp"
                 android:text="@string/password"
-                android:textSize="23sp"
+                android:textColor="#0460A5"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -248,7 +248,7 @@
                 android:paddingEnd="0dp"
                 android:text="@string/confirm_password"
                 android:textColor="#0460A5"
-                android:textSize="23sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -291,7 +291,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/register"
             android:minWidth="150dp"
             android:textColor="@color/white"
@@ -300,8 +300,8 @@
             android:textSize="19sp"
             android:layout_marginTop="30dp"
             android:background="@drawable/borderblue"
-            android:layout_marginStart="60dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             android:elevation="20dp"
             android:id="@+id/btnRegister"
             android:layout_marginBottom="25dp" />

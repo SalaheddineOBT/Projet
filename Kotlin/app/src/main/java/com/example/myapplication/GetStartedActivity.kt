@@ -13,8 +13,10 @@ class GetStartedActivity : AppCompatActivity() {
         val btnlog:AppCompatButton=findViewById(R.id.btnLog)
         val btncrAcc:AppCompatButton=findViewById(R.id.btncrAcc)
 
-        btncrAcc.setOnClickListener{startActivity(Intent(this@GetStartedActivity,RegisterActivity::class.java))}
-        btnlog.setOnClickListener{startActivity(Intent(this@GetStartedActivity,LoginActivity::class.java))}
+        btncrAcc.setOnClickListener{startActivity(Intent(this@GetStartedActivity,RegisterActivity::class.java))
+            finish()}
+        btnlog.setOnClickListener{startActivity(Intent(this@GetStartedActivity,LoginActivity::class.java))
+            finish()}
 
     }
 }

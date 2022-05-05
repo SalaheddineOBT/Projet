@@ -74,7 +74,7 @@ class RegisterActivity : AppCompatActivity() {
             formvalidate(password,txtPass,lnrpss)
             formvalidate(confirm,txtConfirm,lnrcfrm)
 
-            if(!fullname.isNullOrEmpty() || !email.isNullOrEmpty() || !phone.isNullOrEmpty() || !password.isNullOrEmpty() || !confirm.isNullOrEmpty()){
+            if(!fullname.isNullOrEmpty() && !email.isNullOrEmpty() && !phone.isNullOrEmpty() && !password.isNullOrEmpty() && !confirm.isNullOrEmpty()){
                 if(password == confirm){
                     val intent:Intent= Intent(this@RegisterActivity,MainActivity::class.java)
                     intent.putExtra("UserName","hello")

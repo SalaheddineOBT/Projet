@@ -1,10 +1,9 @@
 <?php
 
-
-require __DIR__.'./../jwt/JWT.php';
-require __DIR__.'./../jwt/ExpiredException.php';
-require __DIR__.'./../jwt/BeforeValidException.php';
-require __DIR__.'./../jwt/SignatureInvalidException.php';
+include_once('./../../JWT/JWT.php');
+include_once('./../../JWT/ExpiredException.php');
+include_once('./../../JWT/BeforeValidException.php');
+include_once('./../../JWT/SignatureInvalidException.php');
 
 use \Firebase\JWT\JWT;
 

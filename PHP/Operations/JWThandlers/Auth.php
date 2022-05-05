@@ -1,18 +1,14 @@
 <?php
-
-    require __DIR__.'./../Classes/JWTHandeller.php';
+    require __DIR__.'./JWTHandeller.php';
     class Auth extends JwtHandler{
-
         protected $db;
         protected $headers;
         protected $token;
-
         public function __construct($db,$headers){
             parent::__construct();
             $this->db=$db;
             $this->headers=$headers;
         }
-
         public function isAuth(){
             if(array_key_exists('Authorization',$this->headers)&& !empty(trim($this->headers['Authorization']))):
                 $this->token=explode(" ",trim($this->headers['Authorization']));
@@ -33,10 +29,9 @@
             endif;
                 
         }
-
         protected function fetchUser($user_id){
             try{
-                $fetch_user_by_id="SELECT `UserName`,`Email`,`Password` FROM `users` WHERE `ID`=:id";
+                $fetch_user_by_id="SELECT Name FROM clients WHERE ID=:id";
                 $query_stmt=$this->db->prepare($fetch_user_by_id);
                 $query_stmt->bindValue(':id',$user_id,PDO::PARAM_INT);
                 $query_stmt->execute();

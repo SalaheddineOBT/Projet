@@ -47,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
             formvalidate(email,emailinput,lineareml)
             formvalidate(password,passinput,linearpass)
 
-            if(!password.isNullOrEmpty() || !email.isNullOrEmpty()){
+            if(!password.isNullOrEmpty() && !email.isNullOrEmpty()){
                 val intent:Intent= Intent(this@LoginActivity,MainActivity::class.java)
                 intent.putExtra("UserName","hello")
                 startActivity(intent)
