@@ -19,16 +19,16 @@
         try{
             $selected=$data->selectedBy;
             if($selected == "ById" && isset($_REQUEST["id"]) && !empty($_REQUEST["id"])):
-                if($s=$db->SelectCategorieByID($_REQUEST["id"])):
-                    echo json_encode(["success" => 1,'status'=>500, "Categorie" =>$s]);
+                if($s=$db->SelectMarqueByID($_REQUEST["id"])):
+                    echo json_encode(["success" => 1,'status'=>500, "Marque" =>$s]);
                 else:
                     $db->Message(0,401,"No Data With This Id !");
                 endif;
             elseif($selected == "All"):
-                if($stmt=$db->SelectAllCategories()):
-                    echo json_encode(["success" => 1,'status'=>500, "Categories" => $stmt]);
+                if($stmt=$db->SelectAllMarques()):
+                    echo json_encode(["success" => 1,'status'=>500, "Marques" => $stmt]);
                 else:
-                    $db->Message(0,401,"The Categories Table Is Empty !");
+                    $db->Message(0,401,"The Marques Table Is Empty !");
                 endif;
             elseif($selected == "ById" && !isset($_REQUEST["id"]) || empty($_REQUEST["id"])):
                 $db->Message(0,422,"The ID is Required !");

@@ -76,8 +76,28 @@
             endif;
             return null;
         }
-        public function SelectCategoriesByID($id){
+        public function SelectCategorieByID($id){
             $sql='SELECT * FROM categories WHERE ID='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectAllMarques(){
+            $sql='SELECT * FROM marques';
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetchall(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectMarqueByID($id){
+            $sql='SELECT * FROM marques WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
