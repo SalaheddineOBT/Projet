@@ -8,6 +8,7 @@
             $this->con =null;
             try{
                 $this->con = new PDO('mysql:host='.$_ENV["DB_HOST"].';dbname='.$_ENV["DB_Name"],$_ENV["DB_USER"],$_ENV["DB_PASSWORD"]);
+                //$this->con = new PDO('mysql:host=localhost'.';dbname=id18887616_carrantal','id18887616_salaheddine','J4ekM>sYdHr/mwB0');
                 $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $this->con;
             }catch(PDOException $ex){
@@ -65,5 +66,26 @@
             endif;
             return false;
         }
+        public function SelectAllCategories(){
+            $sql='SELECT * FROM categories';
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetchall(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectCategoriesByID($id){
+            $sql='SELECT * FROM categories WHERE ID='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+
     }
 ?>

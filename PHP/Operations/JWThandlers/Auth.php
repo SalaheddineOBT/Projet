@@ -1,5 +1,5 @@
 <?php
-    require __DIR__.'./JWTHandeller.php';
+    require __DIR__.'/JWTHandeller.php';
     class Auth extends JwtHandler{
         protected $db;
         protected $headers;

@@ -1,6 +1,0 @@
-{
-    "require": {
-        "vlucas/phpdotenv": "^5.4",
-        "vlucas/bulletphp": "^1.7"
-    }
-}
