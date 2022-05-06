@@ -31,7 +31,7 @@
                     $db->Message(0,401,"The Marques Table Is Empty !");
                 endif;
             elseif($selected == "ById" && !isset($_REQUEST["id"]) || empty($_REQUEST["id"])):
-                $db->Message(0,422,"The ID is Required !");
+                $db->Message(0,422,"The Car ID is Required !");
             endif; 
         }catch(PDOEception $e){ 
             $db->Message(0,401,"".$e->getMessage());
