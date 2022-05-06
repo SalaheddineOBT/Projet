@@ -97,7 +97,7 @@
             return null;
         }
         public function SelectMarqueByID($id){
-            $sql='SELECT * FROM marques WHERE ID='.$id;
+            $sql='SELECT * FROM `marques` WHERE ID=1';
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
@@ -156,7 +156,7 @@
             return false;
         }
         public function AddMarque($libelle,$photo){
-            $sql='INSERT INTO marques(Libellé,Photo,) VALUES("'.$libelle.'","'.$photo.'")';
+            $sql='INSERT INTO marques(Libellé,Photo) VALUES("'.$libelle.'","'.$photo.'")';
             $stmt=$this->con->prepare($sql);
             if($stmt->execute()):
                 return true;
@@ -165,7 +165,7 @@
             return false;
         }
         public function AddCategorie($Description,$Photo){
-            $sql='INSERT INTO categories(Description,Photo,) VALUES("'.$Description.'","'.$Photo.'")';
+            $sql='INSERT INTO categories(Description,Photo) VALUES("'.$Description.'","'.$Photo.'")';
             $stmt=$this->con->prepare($sql);
             if($stmt->execute()):
                 return true;
