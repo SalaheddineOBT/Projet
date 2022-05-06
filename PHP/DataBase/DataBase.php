@@ -106,6 +106,72 @@
             endif;
             return null;
         }
-
+        public function SelectAllCars(){
+            $sql='SELECT * FROM cars';
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetchall(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectCarByID($id){
+            $sql='SELECT * FROM cars WHERE ID='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectCarsByCategorie($id){
+            $sql='SELECT * FROM cars WHERE IdCategorie='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function SelectCarsByMarque($id){
+            $sql='SELECT * FROM cars WHERE IdMarque='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                return $row;
+            endif;
+            return null;
+        }
+        public function AddCar($name,$desc,$placenum,$color,$price,$numdor,$photo){
+            $sql='INSERT INTO cars(Name,Description,PlaceNumber,Color,Photo,PricePerDay,NumbreDoors) VALUES("'.$name.'","'.$desc.'",'.$placenum.',"'.$color.'","'.$photo.'"'.$price.','.$numdor.')';
+            $stmt=$this->con->prepare($sql);
+            if($stmt->execute()):
+                return true;
+            endif;
+            echo ''.$stmt->error;
+            return false;
+        }
+        public function AddMarque($libelle,$photo){
+            $sql='INSERT INTO marques(Libellé,Photo,) VALUES("'.$libelle.'","'.$photo.'")';
+            $stmt=$this->con->prepare($sql);
+            if($stmt->execute()):
+                return true;
+            endif;
+            echo ''.$stmt->error;
+            return false;
+        }
+        public function AddCategorie($Description,$Photo){
+            $sql='INSERT INTO categories(Description,Photo,) VALUES("'.$Description.'","'.$Photo.'")';
+            $stmt=$this->con->prepare($sql);
+            if($stmt->execute()):
+                return true;
+            endif;
+            echo ''.$stmt->error;
+            return false;
+        }
     }
 ?>
