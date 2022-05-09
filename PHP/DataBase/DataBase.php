@@ -106,23 +106,87 @@
             endif;
             return null;
         }
-        public function SelectAllCars(){
-            $sql='SELECT * FROM cars';
+        public function SelectMarqueByID1($id){
+            $sql='SELECT * FROM `marques` WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
-                $row=$stmt->fetchall(PDO::FETCH_ASSOC);
+                $row=$stmt->fetch(PDO::FETCH_OBJ);
                 return $row;
             endif;
             return null;
         }
-        public function SelectCarByID($id){
-            $sql='SELECT * FROM cars WHERE ID='.$id;
+        public function SelectCategorieByID1($id){
+            $sql='SELECT * FROM categories WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
-                $row=$stmt->fetch(PDO::FETCH_ASSOC);
+                $row=$stmt->fetch(PDO::FETCH_OBJ);
                 return $row;
+            endif;
+            return null;
+        }
+        public function SelectAllCars(){
+            $rows=array();
+            $sql='SELECT * FROM cars';
+            $stmt=$this->con->prepare($sql);
+
+            $stmt->execute();
+            
+            if($n=$stmt->rowCount()):
+                for($i=0;$i<$n;$i++):
+                    $row=$stmt->fetch(PDO::FETCH_OBJ);
+                    $sqql=$this->SelectCategorieByID1($row->IdCategorie);
+                    if($sss=$this->SelectMarqueByID1($row->IdMarque)):
+                        $r=[
+                            "ID"=>$row->ID,
+                            "Name"=>$row->Name,
+                            "Description"=>$row->Description,
+                            "PlaceNumber"=>$row->PlaceNumber,
+                            "Color"=>$row->Color,
+                            "Photo"=>$row->Photo,
+                            "PricePerDay"=>$row->PricePerDay,
+                            "NumbreDoors"=>$row->NumbreDoors,
+                            "Categorie"=>$sqql->Description,
+                            "Marque"=>$sss->Photo,
+                        ];
+                        array_push($rows,$r);
+                    endif;
+                     
+                endfor;
+                return $rows;
+            endif;
+            return null;
+        }
+        public function SelectCarByID($id){
+            $rows=array();
+            $sql='SELECT * FROM cars WHERE ID='.$id;
+            $stmt=$this->con->prepare($sql);
+
+            $stmt->execute();
+            
+            if($n=$stmt->rowCount()):
+                for($i=0;$i<$n;$i++):
+                    $row=$stmt->fetch(PDO::FETCH_OBJ);
+                    $sqql=$this->SelectCategorieByID1($row->IdCategorie);
+                    if($sss=$this->SelectMarqueByID1($row->IdMarque)):
+                        $r=[
+                            "ID"=>$row->ID,
+                            "Name"=>$row->Name,
+                            "Description"=>$row->Description,
+                            "PlaceNumber"=>$row->PlaceNumber,
+                            "Color"=>$row->Color,
+                            "Photo"=>$row->Photo,
+                            "PricePerDay"=>$row->PricePerDay,
+                            "NumbreDoors"=>$row->NumbreDoors,
+                            "Categorie"=>$sqql->Description,
+                            "Marque"=>$sss->Photo,
+                        ];
+                        array_push($rows,$r);
+                    endif;
+                     
+                endfor;
+                return $rows;
             endif;
             return null;
         }
@@ -172,6 +236,18 @@
             endif;
             echo ''.$stmt->error;
             return false;
+        }
+        public function AddReservation(){
+
+        }
+        public function UpdateReservation(){
+
+        }
+        public function SelectReservationById($id){
+
+        }
+        public function SelectReservationByIdClient($id){
+
         }
     }
 ?>
