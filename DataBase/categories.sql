@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : ven. 06 mai 2022 à 15:49
--- Version du serveur :  10.4.17-MariaDB
--- Version de PHP : 8.0.2
+-- Hôte : localhost
+-- Généré le : lun. 09 mai 2022 à 16:07
+-- Version du serveur :  10.5.12-MariaDB
+-- Version de PHP : 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `carsrental`
+-- Base de données : `id18887616_carrantal`
 --
 
 -- --------------------------------------------------------
