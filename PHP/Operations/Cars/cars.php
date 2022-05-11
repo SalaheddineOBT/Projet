@@ -31,13 +31,13 @@
                     $db->Message(0,401,"The Cars Table Is Empty !");
                 endif;
             elseif($selected == "ByIdCategorie" && isset($_REQUEST["idCategorie"]) && !empty($_REQUEST["idCategorie"])):
-                if($ss=$db->SelectCarsByCategorie($_REQUEST["id"])):
+                if($ss=$db->SelectCarsByCategorie($_REQUEST["idCategorie"])):
                     echo json_encode(["success" => 1,'status'=>500, "Cars" =>$ss]);
                 else:
                     $db->Message(0,401,"No car With This Categorie !");
                 endif;
             elseif($selected == "ByIdMarque" && isset($_REQUEST["idMarque"]) && !empty($_REQUEST["idMarque"])):
-                if($sc=$db->SelectCarsByMarque($_REQUEST["id"])):
+                if($sc=$db->SelectCarsByMarque($_REQUEST["idMarque"])):
                     echo json_encode(["success" => 1,'status'=>500, "Cars" =>$sc]);
                 else:
                     $db->Message(0,401,"No Car With This Marque !");

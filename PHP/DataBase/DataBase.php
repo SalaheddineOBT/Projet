@@ -8,7 +8,6 @@
             $this->con =null;
             try{
                 $this->con = new PDO('mysql:host='.$_ENV["DB_HOST"].';dbname='.$_ENV["DB_Name"],$_ENV["DB_USER"],$_ENV["DB_PASSWORD"]);
-                //$this->con = new PDO('mysql:host=localhost'.';dbname=id18887616_carrantal','id18887616_salaheddine','J4ekM>sYdHr/mwB0');
                 $this->con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 return $this->con;
             }catch(PDOException $ex){
@@ -47,8 +46,8 @@
             echo ''.$stmt->error;
             return false;
         }
-        function SelecteByID($id){
-            $sql='SELECT Name FROM clients WHERE ID='.$id;
+        function SelecteClientByID($id){
+            $sql='SELECT ID,Name,NationalID,NumPermis,NumRents,Photo FROM clients WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
             if($stmt->rowCount()):
@@ -57,7 +56,7 @@
             endif;
             return null;
         }
-        public function SelectedByEmail($email){
+        public function SelectedClientByEmail($email){
             $sql='SELECT * FROM clients WHERE Email="'.$email.'"';
             $stmt=$this->con->prepare($sql);
             $stmt->execute();
@@ -130,9 +129,7 @@
             $rows=array();
             $sql='SELECT * FROM cars';
             $stmt=$this->con->prepare($sql);
-
             $stmt->execute();
-            
             if($n=$stmt->rowCount()):
                 for($i=0;$i<$n;$i++):
                     $row=$stmt->fetch(PDO::FETCH_OBJ);
@@ -162,9 +159,7 @@
             $rows=array();
             $sql='SELECT * FROM cars WHERE ID='.$id;
             $stmt=$this->con->prepare($sql);
-
             $stmt->execute();
-            
             if($n=$stmt->rowCount()):
                 for($i=0;$i<$n;$i++):
                     $row=$stmt->fetch(PDO::FETCH_OBJ);
@@ -237,17 +232,108 @@
             echo ''.$stmt->error;
             return false;
         }
-        public function AddReservation(){
-
+        public function AddReservation($pricettl,$Renton,$ReturnOn,$rentdur,$reservdt,$client,$car){
+            $sql='INSERT INTO reservations(PriceTotal,RentOn,ReturnOn,RentDurationDay,ReservationDate,IdCar,IdClient)
+             VALUES('.$pricettl.',"'.$Renton.'","'.$ReturnOn.'",'.$rentdur.',"'.$reservdt.'",'.$client.','.$car.')';
+            $stmt=$this->con->prepare($sql);
+            if($stmt->execute()):
+                return true;
+            endif;
+            echo ''.$stmt->error;
+            return false;
         }
-        public function UpdateReservation(){
-
+        public function UpdateReservation($reservId,$Renton,$ReturnOn,$rentdur){
+            $sql='UPDATE reservations SET PriceTotal='.$pricettl.',RentOn="'.$Renton.'",ReturnOn="'.$ReturnOn.'",RentDurationDay='.$rentdur.'WHERE ID='.$reservId;
+            $stmt=$this->con->prepare($sql);
+            if($stmt->execute()):
+                return true;
+            endif;
+            echo ''.$stmt->error;
+            return false;
         }
         public function SelectReservationById($id){
-
+            $rows=array();
+            $sql='SELECT * FROM reservations WHERE ID='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($stmt->rowCount()):
+                $row=$stmt->fetch(PDO::FETCH_OBJ);
+                $sqql=$this->SelecteClientByID($row->IdClient);
+                if($sss=$this->SelectCarByID($row->IdCar)):
+                    $r=[
+                        "ID"=>$row->ID,
+                        "PriceTotal"=>$row->PriceTotal,
+                        "RentOn"=>$row->RentOn,
+                        "ReturnOn"=>$row->ReturnOn,
+                        "RentDurationDay"=>$row->RentDurationDay,
+                        "ReservationDate"=>$row->ReservationDate,
+                        "Client"=>$sqql,
+                        "Car"=>$sss,
+                    ];
+                    array_push($rows,$r);
+                endif;
+                return $rows;
+            endif;
+            return null;
+        }
+        public function SelectAllReservationd(){
+            $rows=array();
+            $sql='SELECT * FROM reservations';
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            if($n=$stmt->rowCount()):
+                for($i=0;$i<$n;$i++):
+                    $row=$stmt->fetch(PDO::FETCH_OBJ);
+                    $sqql=$this->SelecteClientByID($row->IdClient);
+                    if($sss=$this->SelectCarByID($row->IdCar)):
+                        $r=[
+                            "ID"=>$row->ID,
+                            "PriceTotal"=>$row->PriceTotal,
+                            "RentOn"=>$row->RentOn,
+                            "ReturnOn"=>$row->ReturnOn,
+                            "RentDurationDay"=>$row->RentDurationDay,
+                            "ReservationDate"=>$row->ReservationDate,
+                            "Client"=>$sqql,
+                            "Car"=>$sss,
+                        ];
+                        array_push($rows,$r);
+                    endif;
+                endfor;
+                return $rows;
+            endif;
+            return null;
         }
         public function SelectReservationByIdClient($id){
-
+            $rows=array();
+            $arry=array();
+            $sql='SELECT * FROM reservations WHERE IdClient='.$id;
+            $stmt=$this->con->prepare($sql);
+            $stmt->execute();
+            $clnt=$this->SelecteClientByID($id);         
+            if($n=$stmt->rowCount()):
+                for($i=0;$i<$n;$i++):
+                    $row=$stmt->fetch(PDO::FETCH_OBJ);
+                    if($sss=$this->SelectCarByID($row->IdCar)):
+                        $r=[
+                            "ID"=>$row->ID,
+                            "PriceTotal"=>$row->PriceTotal,
+                            "RentOn"=>$row->RentOn,
+                            "ReturnOn"=>$row->ReturnOn,
+                            "RentDurationDay"=>$row->RentDurationDay,
+                            "ReservationDate"=>$row->ReservationDate,
+                            "Car"=>$sss
+                        ];
+                        array_push($rows,$r);
+                    endif;  
+                endfor;
+                $arry=[
+                    "Client"=>$clnt,
+                    "Reservations"=>$rows
+                ];
+                return $arry;
+            endif;
+            return null;
         }
+
     }
 ?>

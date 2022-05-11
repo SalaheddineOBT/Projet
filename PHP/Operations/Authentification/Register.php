@@ -5,7 +5,6 @@
     header("Content-Type: application/json;charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
     include_once("./../../DataBase/DataBase.php");
-    include_once("./../JWThandlers/JWTHandeller.php");
     $db=new DataBase();
     $con=$db->Connection();
     $data=json_decode(file_get_contents("php://input"));
@@ -39,7 +38,7 @@
             $db->Message(0,422,"Your User Name Must Be At Least 3 Characters !");
         else:
             try{
-                if($db->SelectedByEmail($email)):
+                if($db->SelectedClientByEmail($email)):
                     $db->Message(0,422,"This Email Already Exist !");
                 elseif($db->Register($username,$email,$password,$phone)):
                     $db->Message(0,202,"Successfull Register .");
