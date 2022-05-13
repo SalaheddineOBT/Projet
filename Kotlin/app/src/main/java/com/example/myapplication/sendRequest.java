@@ -1,10 +1,14 @@
 package com.example.myapplication;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONObject;
+
+import java.util.Map;
 
 public class sendRequest {
     private String url;
@@ -32,16 +36,20 @@ public class sendRequest {
     }
 
     JsonObjectRequest req = new JsonObjectRequest(Request.Method.GET, url,
-            null, new Response.Listener<JSONObject>(){
+            null, new Response.Listener<JSONObject>() {
         @Override
+        public void onResponse(JSONObject response) {
 
+        }
+    }, new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
 
+        }
     }){
         @Override
         public Map<String, String> getHeaders() throws AuthFailureError {
-            HashMap<String, String> headers = new HashMap<String, String>();
-            headers.put("Authorization", "2e96e0a4ff05ba86dc8f778ac49a8dc0");
-            return headers;
+            return super.getHeaders();
         }
     };
 }
