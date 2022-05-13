@@ -4,21 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color_primary"
+    android:background="@color/white"
+    android:paddingTop="50dp"
     tools:context=".LoginActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/borderwhite"
-        android:elevation="20dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:fontFamily="@font/maitree_bold"
             android:text="@string/login_page"
             android:textAlignment="center"

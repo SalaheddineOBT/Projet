@@ -76,10 +76,13 @@ class RegisterActivity : AppCompatActivity() {
 
             if(!fullname.isNullOrEmpty() && !email.isNullOrEmpty() && !phone.isNullOrEmpty() && !password.isNullOrEmpty() && !confirm.isNullOrEmpty()){
                 if(password == confirm){
-                    val intent:Intent= Intent(this@RegisterActivity,MainActivity::class.java)
+
+
+
+                /*val intent:Intent= Intent(this@RegisterActivity,MainActivity::class.java)
                     intent.putExtra("UserName","hello")
                     startActivity(intent)
-                    finish()
+                    finish()*/
                 }else{
 
                 }
